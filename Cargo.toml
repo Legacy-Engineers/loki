@@ -1,6 +1,19 @@
 [package]
-name = "loki"
+name = "loki_kernel"
 version = "0.1.0"
+authors = ["Dawda Borje Kujabi <dawdaborjekujabi@gmail.com>"]
 edition = "2024"
 
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+
+[[bin]]
+name = "loki_kernel"
+test = false
+bench = false
+
 [dependencies]
+bootloader = "0.9"
